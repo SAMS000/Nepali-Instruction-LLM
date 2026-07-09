@@ -1,0 +1,11 @@
+base_model: "Qwen/Qwen2.5-3B-Instruct"
+
+trust_remote_code: true
+
+load_in_4bit: true
+
+bnb_quant_type: "nf4"
+
+bnb_use_double_quant: true
+
+torch_dtype: "bfloat16"
