@@ -1,11 +1,27 @@
+# Base Model
 base_model: "Qwen/Qwen2.5-3B-Instruct"
 
+# Hugging Face
 trust_remote_code: true
 
-load_in_4bit: true
+# Device
+device_map: "auto"
 
-bnb_quant_type: "nf4"
-
-bnb_use_double_quant: true
-
+# Precision
 torch_dtype: "bfloat16"
+
+# Quantization
+load_in_4bit: true
+bnb_quant_type: "nf4"
+bnb_use_double_quant: true
+bnb_compute_dtype: "bfloat16"
+
+# Tokenizer
+padding_side: "left"
+use_fast: true
+
+# Generation Defaults
+max_new_tokens: 512
+temperature: 0.7
+top_p: 0.9
+do_sample: true
